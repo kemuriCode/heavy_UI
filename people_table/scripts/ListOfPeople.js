@@ -19,4 +19,7 @@ function ListOfPeople() {
         return '<tr><th>ID</th> </th><th>Name</th> <th>Surname</th> <th>Gender</th> <th>Email</th> <th>Age</th> <th>Birthsday</th></tr>'
 
     }
+    self.clear = function(){
+        people=[];
+    }
 }

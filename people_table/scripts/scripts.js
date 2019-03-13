@@ -40,5 +40,3 @@ function init() {
     var context = document.getElementById('table');
     context.innerHTML = listOfPeople.toTable();
 }
-
-var person = new Person();
