@@ -30,6 +30,9 @@ self.prev = function () {
         self.currnetPage--;
     }
     var begin = (selg.currnetPage) + self.paeSize;
+    var end = (self.currnetPage)*self.pageSIze;
+    getData(begin,end);
+    self.context.innerHTML=self.people.toTable();
 }
 
 function init() {
@@ -39,4 +42,5 @@ function init() {
     }
     var context = document.getElementById('table');
     context.innerHTML = listOfPeople.toTable();
+    viewModel.next();
 }
