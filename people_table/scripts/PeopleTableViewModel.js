@@ -3,7 +3,7 @@ function PeopleTableViewModel(config) {
   self.people = new ListOfPeople;
   self.currentPage = 0;
   self.pageSize = config.pageSize;
-  self.context = config.centext;
+  self.context = config.context;
 
   var getData = function (begin, end) {
     if (end > data.length) {
