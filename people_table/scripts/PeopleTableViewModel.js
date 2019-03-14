@@ -38,4 +38,9 @@ self.prev = function () {
   self.pagination = function () {
       
   }
+  self.sort = function (comparer) {
+    data.sort(comparer);
+    self.currenPage=0;
+    self.next();
+  }
 }
