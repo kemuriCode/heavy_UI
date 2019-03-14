@@ -1,7 +1,7 @@
 var viewModel = new PeopleTableViewModel({
     pageSize: 25,
     count: data.length,
-    context: document.getElementById('table')
+    context:document.getElementById('table')
 });
 
 var comparator = new Comparators();
@@ -14,4 +14,5 @@ function init() {
     var context = document.getElementById('table');
     context.innerHTML = listOfPeople.toTable();
     viewModel.next();
+    viewModel.prev();
 }

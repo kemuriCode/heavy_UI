@@ -1,4 +1,4 @@
-function PepopleTableViewModel(config) {
+function PeopleTableViewModel(config) {
   var self = this;
   self.people = new ListOfPeople;
   self.currentPage = 0;
@@ -17,10 +17,9 @@ function PepopleTableViewModel(config) {
     }
   }
 
-
   self.next = function () {
     self.people.clear();
-    var begin = (sel.currentPage) * self.pageSize;
+    var begin = (self.currentPage) * self.pageSize;
     var end = (self.currentPage + 1) * self.pageSize;
     getData(begin, end);
     self.currnetPage++;
@@ -28,10 +27,10 @@ function PepopleTableViewModel(config) {
   }
   self.prev = function () {
     self.people.clear();
-    if (self.currenPage - 1 >= 0) {
-      self.currenttPage--;
+    if (self.currentPage - 1 >= 0) {
+      self.currentPage--;
     }
-    var begin = (selg.currentPage) * self.pageSize;
+    var begin = (self.currentPage) * self.pageSize;
     var end = (self.currentPage) * self.pageSize;
     getData(begin, end);
     self.context.innerHTML = self.people.toTable();
@@ -39,7 +38,7 @@ function PepopleTableViewModel(config) {
 
   self.sort = function (comparer) {
     data.sort(comparer);
-    self.currenPage = 0;
+    self.currentPage = 0;
     self.next();
   }
 }
