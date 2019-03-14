@@ -16,7 +16,7 @@ function ListOfPeople() {
     }
 
     var generateTableHeader = function () {
-        return '<tr><th>ID</th> <th><button onclick="viewModel.sort(comparator.byName)">Name</button></th> </th><th>Name</th> <th>Surname</th> <th>Gender</th> <th>Email</th> <th>Age</th> <th>Birthsday</th></tr>'
+        return '<tr><th>ID</th> <th><button onclick="viewModel.sort(comparator.byName)">Name</button></th><th>Name</th> <th>Surname</th> <th>Gender</th> <th>Email</th> <th>Age</th> <th>Birthsday</th></tr>'
 
     }
     self.clear = function(){

@@ -1,7 +1,7 @@
 function Comparators() {
  var self = this;
  self.byName = function (person1, person2) {
-  return person.firstName.localeCompare(person2.firstName);
+  return person1.firstName.localeCompare(person2.firstName);
  }
 
  self.bySurname = function (person1, person2) {
