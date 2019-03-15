@@ -4,7 +4,6 @@ function PeopleTableViewModel(config) {
   self.currentPage = 0;
   self.pageSize = config.pageSize;
   self.context = config.context;
-
   var getData = function (begin, end) {
     if (end > data.length) {
       end = data.length;
@@ -16,8 +15,9 @@ function PeopleTableViewModel(config) {
       self.people.addPerson(data[i]);
     }
   }
-
+  
   self.next = function () {
+
     self.people.clear();
     var begin = (self.currentPage) * self.pageSize;
     var end = (self.currentPage + 1) * self.pageSize;
@@ -34,6 +34,18 @@ function PeopleTableViewModel(config) {
     var end = (self.currentPage) * self.pageSize;
     getData(begin, end);
     self.context.innerHTML = self.people.toTable();
+  }
+  var x = document.getElementById
+  var pagination = function (x) {
+    if (x == 0) {
+      return pageSize;
+    }
+    if (x == 1) {
+      return pageSize*2;
+    }
+    if (self.listView == 2) {
+      return pageSize*4;
+    }
   }
 
   self.sort = function (comparer) {
