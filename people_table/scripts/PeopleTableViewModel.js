@@ -22,7 +22,7 @@ function PeopleTableViewModel(config) {
     var begin = (self.currentPage) * self.pageSize;
     var end = (self.currentPage + 1) * self.pageSize;
     getData(begin, end);
-    self.currnetPage++;
+    self.currentPage++;
     self.context.innerHTML = self.people.toTable();
   }
   self.prev = function () {
@@ -31,21 +31,9 @@ function PeopleTableViewModel(config) {
       self.currentPage--;
     }
     var begin = (self.currentPage) * self.pageSize;
-    var end = (self.currentPage) * self.pageSize;
+    var end = (self.currentPage+1) * self.pageSize;
     getData(begin, end);
     self.context.innerHTML = self.people.toTable();
-  }
-  var x = document.getElementById
-  var pagination = function (x) {
-    if (x == 0) {
-      return pageSize;
-    }
-    if (x == 1) {
-      return pageSize*2;
-    }
-    if (self.listView == 2) {
-      return pageSize*4;
-    }
   }
 
   self.sort = function (comparer) {

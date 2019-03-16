@@ -20,9 +20,9 @@ function Person(json) {
             '</td><td>' +
             self.email +
             '</td><td>' +
-            self.bday +
-            '</td><td>' +
             self.age +
+            '</td><td>' +
+            self.bday +
             '</td></tr>'
     }
 

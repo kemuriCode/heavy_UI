@@ -2,13 +2,17 @@
 
 <body onload="init()">
     <div id="table"></div>
-    <button onclick="viewModel.prev(pagination)">PREV</button>
-    <select onabort="viewModel.pagination(x)" id="list">
-        <option value="0">25</option>
-        <option value="1">50</option>
-        <option value="2">100</option>
-    </select>
-    <button onclick="viewModel.next(pagination)">NEXT</button>
+    <button onclick="viewModel.prev()">PREV</button>
+    <button >25</button>
+    <button >50</button>
+    <button >100</button>
+
+    <!-- <select id="list" name="list">
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select> -->
+    <button onclick="viewModel.next()">NEXT</button>
 
 
     <script type="application/javascript" src="scripts/DATA.js"></script>
