@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { PostCommentComponent } from './post-comment/post-comment.component';
 import {FormsModule} from '@angular/forms';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       BlogPostComponent,
-      PostCommentComponent
+      PostCommentComponent,
+      ChatComponent
    ],
    imports: [
       BrowserModule,
