@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BlogPost } from './blog-post';
 
 @Component({
-  selector: 'blog-post',
+  selector: 'app-blog-post',
   templateUrl: './blog-post.component.html',
   styleUrls: ['./blog-post.component.css']
 })
-export class BlogPostComponent {
+export class BlogPostComponent implements OnInit {
+
   isInEditMode = false;
 
   post = new BlogPost(
@@ -16,7 +17,12 @@ export class BlogPostComponent {
     ['comment 1', 'comment 2']
     );
 
-    toggleEditMode(): void {
-      this.isInEditMode = !this.isInEditMode;
-      }
+  toggleEditMode(): void {
+    this.isInEditMode = !this.isInEditMode;
+    }
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }
