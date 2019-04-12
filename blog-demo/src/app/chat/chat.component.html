@@ -2,11 +2,11 @@
   <div class="input-area">
     <form (submit)="sendMessage()" name="messageForm" #messageForm="ngForm">
       <div>
-        <input type="text" placeholder="Your name" name="name" id="name" [(ngModel)]="message.name">
-        <textarea type="text" placeholder="Your message" name="message" id="message" [(ngModel)]="message.text" rows="5"></textarea>
+        <input type="text" placeholder="Nick" name="name" id="name" [(ngModel)]="message.name">
+        <textarea type="text" placeholder="Komentarz" name="message" id="message" [(ngModel)]="message.text" rows="5"></textarea>
       </div>
       <button>
-        <span data-feather="send"></span>
+        <span data-feather="send">Dodaj</span>
       </button>
     </form>
   </div>

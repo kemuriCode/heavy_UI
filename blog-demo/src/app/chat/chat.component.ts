@@ -15,7 +15,8 @@ export interface Message {
 export class ChatComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
-  @Output() onSendMessage: EventEmitter<Message> = new EventEmitter();
+  // tslint:disable-next-line:no-output-on-prefix
+  @Output() onSendMessage: EventEmitter <Message> = new EventEmitter ();
 
   message = {
     name: '',
@@ -37,6 +38,6 @@ export class ChatComponent implements OnInit {
   }
 
   ngOnInit() {
-    feather.replace(); 
+
   }
 }
