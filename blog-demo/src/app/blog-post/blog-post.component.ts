@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 
 @Component({
   selector: 'app-blog-post',
@@ -17,6 +18,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogPostComponent implements OnInit {
 
+=======
+import { BlogPost } from './blog-post';
+
+@Component({
+  selector: 'app-blog-post',
+  templateUrl: './blog-post.component.html',
+  styleUrls: ['./blog-post.component.scss']
+})
+export class BlogPostComponent implements OnInit {
+
+  isInEditMode = false;
+
+  post = new BlogPost(
+    'New Post',
+    new Date(),
+    'some content',
+    ['comment 1', 'comment 2']
+    );
+
+  toggleEditMode(): void {
+    this.isInEditMode = !this.isInEditMode;
+    }
+>>>>>>> deed1138baf961d3061b5df94672ece3786f49eb
   constructor() { }
 
   ngOnInit() {
